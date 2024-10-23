@@ -1,0 +1,46 @@
+<div class="header">
+  <section class="header__section-left">
+    <img src="assets/images/logo-cnss.svg" alt="Logo CNSS" class="header__logo"/>
+    <div class="header__app-name">VISION 360° ASSURÉ</div>
+  </section>
+  <section *ngIf="isUserFound" class="header__section-right">
+    <!-- Applications Menu -->
+    <div class="header__item">
+      <button class="header__apps-btn" (click)="toggleAppsMenu()">
+        <img src="assets/images/apps.svg" alt="Applications" class="header__apps-icon"/>
+      </button>
+      <div *ngIf="isAppsMenuOpen" class="header__dropdown-menu -left-60">
+        <div *ngFor="let item of appsMenu; let isLast = last">
+          <button class="header__item-btn" (click)="item.command()">
+            <h1 class="header__item-label">{{ item.label }}</h1>
+            <p class="header__item-meta">{{ item.description }}</p>
+          </button>
+          <div *ngIf="!isLast" class="header__menu-divider"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Profile -->
+    <div class="header__item">
+      <button class="header__btn-profile" (click)="toggleProfileMenu()">
+        {{ userAcronym }}
+      </button>
+      <div *ngIf="isProfileMenuOpen" class="header__dropdown-menu -left-60">
+        <div class="header__item-profile">
+          <span class="header__profile-small">{{ userAcronym }}</span>
+          <div class="header__profile-info">
+            <span class="font-medium text-sm">{{ userFullName }}</span>
+            <span class="text-sm text-neutral-500">{{ 'Agent' }}</span>
+          </div>
+        </div>
+        <div class="header__menu-divider"></div>
+        <button class="header__logout-btn" (click)="logout()">
+          <img src="assets/images/logout.svg" alt="Déconnexion"/>
+          <span class="px-2">Déconnexion</span>
+        </button>
+      </div>
+    </div>
+    <div class="header__item-fullname">
+      <span class="font-normal text-sm mt-3.5">{{ userFullName }}</span>
+    </div>
+  </section>
+</div>

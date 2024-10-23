@@ -1,0 +1,103 @@
+<div class="search">
+  <section class="search__subheader">
+    <span>Rechercher votre client</span>
+  </section>
+  <section class="search__header">
+    <form class="grid grid-cols-12 gap-1 text-xs">
+      <div class="col-span-2 flex flex-col gap-1 ">
+        <div class="flex justify-between">
+          <p>N° d'immat. /Ident. caisse étrangère</p>
+          <span>i</span>
+        </div>
+        <div class="flex border rounded-sm items-center">
+          <p-dropdown
+            [options]="searchOptions"
+            [(ngModel)]="selectedSearchOption"
+            placeholder="Select a City"
+            [style]="{ 'width': '100%'}"
+            class="w-1/2 text-xs"
+            [group]="true">
+            <ng-template let-group pTemplate="group">
+              <div class="flex align-items-center">
+                <span>{{ group.name }}</span>
+              </div>
+            </ng-template>
+          </p-dropdown>
+
+          <input type="text" class="border-l w-1/2 px-0.5 h-full" placeholder="test">
+        </div>
+      </div>
+
+      <div class="col-span-2 flex flex-col gap-1">
+        <div class="flex justify-between">
+          <p>N° d'immat. /Ident. caisse étrangère</p>
+          <span>i</span>
+        </div>
+        <div class="flex border rounded-sm  justify-center">
+          <p-dropdown
+            [options]="searchOptions"
+            [(ngModel)]="selectedSearchOption"
+            placeholder="Select a City"
+            [style]="{ 'width': '100%'}"
+            class="w-1/3 text-xs"
+            [group]="true">
+            <ng-template let-group pTemplate="group">
+              <div class="flex align-items-center w-1/2">
+                <span class="text-xs ">{{ group.name }}</span>
+              </div>
+            </ng-template>
+          </p-dropdown>
+
+          <input type="text" class="border-l px-0.5 size-full" placeholder="test">
+        </div>
+      </div>
+
+      <div class="col-span-2 flex flex-col gap-1">
+        <div class="flex justify-between">
+          <p>Nom</p>
+        </div>
+        <input type="text" class="border rounded-sm  px-0.5 size-full" placeholder="test">
+      </div>
+
+      <div class="col-span-2 flex flex-col gap-1">
+        <div class="flex justify-between">
+          <p>Nom</p>
+        </div>
+        <input type="text" class="border rounded-sm  px-0.5 size-full" placeholder="test">
+      </div>
+
+      <div class="col-span-2 flex flex-col gap-1">
+        <div class="flex justify-between">
+          <p>Date de nais</p>
+        </div>
+        <input type="text" class="border rounded-sm  px-0.5 size-full" placeholder="test">
+      </div>
+
+      <div class="col-span-2 flex flex-col rounded-sm  justify-end">
+
+        <div class="flex gap-2 w-full">
+          <button type="button" class="w-1/2 border rounded-sm border-blue-700 bg-blue-300 text-blue-700 p-2">Reset</button>
+          <button type="button" class="w-1/2 border rounded-sm border-blue-700 bg-blue-700 text-white p-2">Reset</button>
+
+        </div>
+      </div>
+
+    </form>
+
+  </section>
+
+  <section class="search__card-info">
+    <p class="search__info-top">
+      Bienvenue sur la plateforme Vision 360 Assurés.
+    </p>
+    <div class="search__no-result-icon">
+      <img src="/assets/images/search_insured.svg" alt="Recherche négative">
+    </div>
+    <p class="search__info-bottom">
+      Utilisez le formulaire de recherche pour saisir votre critère et accéder rapidement à la fiche de l’assuré.
+    </p>
+    <p class="search__info-bottom mt-3">
+      Accédez à l'essentiel facilement !
+    </p>
+  </section>
+</div>

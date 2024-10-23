@@ -1,0 +1,33 @@
+<div class="personal-data-container">
+  <p-tabView>
+    <p-tabPanel header="Données personnelles">
+      <ng-template pTemplate="content">
+        <p-accordion>
+          <p-accordionTab>
+            <ng-template pTemplate="header">
+              <div class="custom-accordion-header">
+                <div>
+                  <h3>Informations personnelles</h3>
+                  <p>Informations personnelles et administratives associées à l'assuré</p>
+                </div>
+                <div class="header-actions">
+                  <i class="pi pi-chevron-down"></i>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="content">
+              <div class="personal-data-content" fxLayout="row wrap" fxLayoutGap="20px grid">
+                <div fxFlex="100" fxFlex.gt-sm="calc(33.33% - 20px)" fxFlex.sm="calc(50% - 20px)" *ngFor="let item of personalData">
+                  <div class="info-field">
+                    <p class="field-label">{{ item.label }}</p>
+                    <p class="field-value">{{ item.value }}</p>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </p-accordionTab>
+        </p-accordion>
+      </ng-template>
+    </p-tabPanel>
+  </p-tabView>
+</div>

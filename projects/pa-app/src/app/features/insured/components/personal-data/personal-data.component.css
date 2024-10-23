@@ -1,0 +1,128 @@
+.personal-data-container {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav {
+  background-color: #fff;
+  border-bottom: 0.7px solid #CBD1D7;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link {
+  background-color: #fff;
+  color: #E29322;
+  border: none;
+  border-radius: 0;
+  padding: 22px;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li.p-highlight .p-tabview-nav-link {
+  border-bottom: 2px solid #E29322;
+}
+
+:host ::ng-deep .p-tabview .p-tabview-nav li .p-tabview-nav-link:not(.p-disabled):focus {
+  box-shadow: none;
+}
+
+:host ::ng-deep .p-tabview-title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+:host ::ng-deep .p-accordion .p-accordion-header .p-accordion-header-link {
+  background-color: #fff;
+  color: #495057;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+:host ::ng-deep .p-accordion .p-accordion-content {
+  border: none;
+  background-color: #fff;
+}
+
+:host ::ng-deep .p-accordion .p-accordion-toggle-icon {
+  display: none;
+}
+
+.custom-accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99%;
+  padding: 1rem;
+}
+
+.custom-accordion-header h3 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #3F4449;
+  margin: 0;
+}
+
+.custom-accordion-header p {
+  margin: 0.25rem 0 0;
+  font-size: 14px;
+  color: #6c757d;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions button {
+  margin-right: 0.5rem;
+  z-index: 1;
+}
+
+:host ::ng-deep .p-button.p-button-text {
+  color: #6c757d;
+}
+
+:host ::ng-deep .p-button.p-button-text:hover {
+  background-color: #e9ecef;
+}
+
+.personal-data-content {
+  padding: 1rem;
+  position: relative;
+}
+
+.personal-data-content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15px;
+  bottom: 35px;
+  width: 3px;
+  background-color: #F5C683;
+}
+
+.info-field {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 4px;
+  height: 100%;
+  margin-left: 4px;
+}
+
+.field-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  margin-bottom: 0.5rem;
+}
+
+.field-value {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #495057;
+  margin: 0;
+}

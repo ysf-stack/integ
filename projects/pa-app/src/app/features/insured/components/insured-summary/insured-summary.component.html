@@ -1,0 +1,79 @@
+<div id="insured-summary">
+  <div class="header-container">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between start" class="content-wrapper">
+      <div fxFlex="1 1 auto" fxLayout="row wrap" fxLayoutGap="24px">
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="16px">
+          <div fxLayout="row" fxLayoutAlign="start" class="avatar">
+            <div class="avatar-initials">
+              {{ initials }}
+            </div>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="start" fxLayoutGap="8px" class="user-info">
+            <h2>{{ name }}</h2>
+            <p>{{ occupation }}</p>
+            <p-tag value="Statut" styleClass="status-tag">
+              <ng-template pTemplate="icon">
+                <i class="pi pi-check status-tag-icon"></i>
+              </ng-template>
+            </p-tag>
+          </div>
+        </div>
+        <div fxFlex="1 1 auto" fxLayout="row wrap" fxLayoutAlign="start start" fxLayoutGap="24px">
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">Catégorie</p>
+              <p class="info-value">{{ category }}</p>
+            </div>
+          </div>
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">N° Immat.</p>
+              <p class="info-value">{{ immatNumber }}</p>
+            </div>
+          </div>
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">CIN</p>
+              <p class="info-value">{{ cin }}</p>
+            </div>
+          </div>
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">Vivant</p>
+              <p class="info-value">{{ living }}</p>
+            </div>
+          </div>
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">Actif</p>
+              <p class="info-value">{{ active }}</p>
+            </div>
+          </div>
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">Date de naissance</p>
+              <p class="info-value">{{ birthDate }}</p>
+            </div>
+          </div>
+          <div>
+            <div class="subheader-info" fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">Genre</p>
+              <p class="info-value">{{ gender }}</p>
+            </div>
+          </div>
+          <div>
+            <div fxLayout="column" fxLayoutGap="2px">
+              <p class="info-label">Dernier employeur</p>
+              <p class="info-value">{{ lastEmployer }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="0 0 auto" fxLayoutAlign="end start" class="close-button-wrapper">
+        <p-button icon="pi pi-times" [rounded]="true" [outlined]="true" (onClick)="close()"></p-button>
+      </div>
+    </div>
+  </div>
+
+</div>

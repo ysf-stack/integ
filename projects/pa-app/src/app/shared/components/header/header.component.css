@@ -1,0 +1,177 @@
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  height: 70px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header__section-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.header__app-name {
+  @apply ml-4 text-[#1D3C85] text-[18px] text-center font-semibold;
+}
+
+.header__section-right {
+  display: flex;
+  margin-right: 50px;
+  gap: 1rem;
+}
+
+.header__logo {
+  width: 50px;
+  height: 50px;
+}
+
+.header__item {
+  position: relative;
+}
+
+.header__apps-btn {
+  background-color: transparent;
+  border-radius: 2rem;
+  transition: background-color 0.3s ease;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.header__apps-btn:hover {
+  background-color: #ECF7F7;
+}
+
+.header__apps-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header__dropdown-menu {
+  max-height: calc(90vh - 3rem);
+  overflow-y: auto;
+  position: absolute;
+  width: 270px;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.header__item-label {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.header__item-meta {
+  text-align: left;
+  font-size: 13px;
+}
+
+.header__menu-divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 0.5rem 0;
+}
+
+.header__profile-info {
+  @apply flex flex-col ml-2;
+}
+
+.header__item-profile {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem 2.5rem 0.5rem 1.5rem;
+}
+
+.header__btn-profile {
+  width: 32px;
+  height: 32px;
+  background-color: #46B1AB;
+  color: white;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.75rem;
+  font-size: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.header__btn-profile:hover {
+  background-color: #3DA89A;
+}
+
+.header__profile-small {
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  background-color: #46B1AB;
+  color: white;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__logout-btn {
+  display: flex;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.header__logout-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.header__item-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.header__item-fullname {
+  align-content: center;
+}
+
+@media (max-width: 600px) {
+  .header__logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__app-name {
+    font-size: 10px;
+  }
+
+  .header__apps-btn,
+  .header__btn-profile {
+    width: 28px;
+    height: 28px;
+  }
+
+  .header__section-left,
+  .header__section-right {
+    gap: 0.5rem;
+  }
+  .header__item-fullname {
+    display: none;
+  }
+}
